@@ -39,7 +39,7 @@ export default defineEventHandler(async (event) => {
   const token = await createTokenIfNeeded(event);
 
   // proxy
-  cleanupHeadersBeforeProxy(event);
+  // cleanupHeadersBeforeProxy(event);
   await proxyRequest(event, destination, {
     fetchOptions: {
       redirect: 'follow',
